@@ -1,0 +1,4 @@
+/* Style to make sure that buttons do not collapse when all text is gone */
+#cpe-editor a[contenteditable="true"]:empty:before {
+  content: "\00a0 ";
+}

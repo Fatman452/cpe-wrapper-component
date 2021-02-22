@@ -1,0 +1,12 @@
+$backdrop-top: 0 !default;
+$backdrop-width: 100% !default;
+$backdrop-height: 100% !default;
+$backdrop-background-color: rgba(0, 0, 0, 0.5) !default;
+
+.backdrop {
+  position: absolute;
+  top: $backdrop-top;
+  width: $backdrop-width;
+  height: $backdrop-height;
+  background-color: $backdrop-background-color;
+}

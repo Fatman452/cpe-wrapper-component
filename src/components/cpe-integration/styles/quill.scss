@@ -1,0 +1,32 @@
+/* quill styles */
+.ql-clipboard {
+  height: 1px;
+  position: absolute;
+  left: -100000px;
+}
+
+.ql-editor {
+  cursor: text;
+  outline: none;
+  // See VN-14539 and VN-14657
+  white-space: pre-wrap;
+}
+
+.greeting-tag,
+.account-detail,
+.view-as-webpage,
+.contact-detail {
+  cursor: pointer;
+  outline: 1px dotted #969696 !important;
+  padding: 1px;
+}
+
+.greeting-tag-cpe,
+.account-detail-cpe,
+.view-as-webpage-cpe,
+.contact-detail-cpe,
+.generic-cpe {
+  cursor: pointer;
+  outline: 1px dotted #969696 !important;
+  padding: 1px;
+}

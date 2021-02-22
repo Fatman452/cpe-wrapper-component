@@ -1,0 +1,26 @@
+$gray-300: #cfd8dc;
+$gray-400: #b0bec5;
+$blue: #5dacd6;
+
+.popover-toolbar {
+  .btn-secondary {
+    background-color: $gray-300;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $gray-400;
+    }
+    &.active {
+      color: #fff !important;
+      background-color: $blue !important;
+      border-color: transparent !important;
+      &:hover,
+      &:focus {
+        background-color: shade($blue, 10%) !important;
+      }
+      &:active {
+        background-color: shade($blue, 20%) !important;
+      }
+    }
+  }
+}

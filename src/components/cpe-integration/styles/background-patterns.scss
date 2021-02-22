@@ -1,0 +1,57 @@
+$defaultBgColor: #e6e6e6;
+$blue: #2196f3;
+$control-focus-box-shadow: 0 0 0 0.2rem rgba($blue, 0.5);
+
+%imgfocus {
+  border-color: $blue;
+  box-shadow: $control-focus-box-shadow;
+}
+.palette-drawer {
+  z-index: 2;
+  .background-no-pattern {
+    &.selected {
+      @extend %imgfocus;
+    }
+  }
+  .background-options {
+    display: flex;
+    justify-content: space-between;
+    div {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 6px 0;
+      width: 48%;
+      height: 88px;
+      background-color: $defaultBgColor;
+      &:hover {
+        @extend %imgfocus;
+      }
+    }
+  }
+  .background-patterns {
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        margin: 0;
+        padding: 6px 0;
+        width: 100%;
+        height: 88px;
+        .background-pattern {
+          cursor: pointer;
+          height: 100%;
+          width: 100%;
+          margin: 0;
+          background-color: $defaultBgColor;
+          &:hover,
+          &.selected {
+            @extend %imgfocus;
+          }
+        }
+      }
+    }
+  }
+}

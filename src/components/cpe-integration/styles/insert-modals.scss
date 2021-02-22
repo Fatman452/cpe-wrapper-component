@@ -1,0 +1,48 @@
+// $zindex-modal:                      1050 !default;
+.popover {
+  z-index: 1049 !important;
+}
+
+// fix the drop down for full width
+.selectDetail {
+  width: 100% !important;
+}
+
+.add-dynamic-variable {
+  display: block;
+  margin: -10px 0 0 0;
+  text-align: right;
+}
+
+// Link vs Insert, active and disabled states
+.insert.disabled {
+  box-shadow: none;
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.insert.active .btn-secondary {
+  background-color: #5dacd6;
+  color: white;
+}
+
+.link.disabled {
+  box-shadow: none;
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.link.active .btn-secondary {
+  //background-color: $primary;
+  //color: $white;
+  background-color: #5dacd6;
+  color: white;
+}
+
+.insert-link-dropdown {
+  text-align: left !important;
+}
+
+//eof

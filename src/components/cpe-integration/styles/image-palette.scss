@@ -1,0 +1,53 @@
+.image-palette {
+  .palette-view-header {
+    width: 309px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 1rem 1.5rem;
+    border-right: 0.0625rem solid #d7dadd;
+    border-bottom: 1px solid #d7dadd;
+    background-color: #fff;
+    .dropdowns-section {
+      display: flex;
+      justify-content: space-between;
+      .btn-wrapper {
+        margin: 0;
+        width: 120px;
+        .btn {
+          width: 100%;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .palette-view-body {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    .palette-view-content {
+      padding-top: 1.5rem;
+      .btn-placeholder {
+        margin: 0 auto;
+        width: 260px;
+        height: 50px;
+        font-size: 13px;
+      }
+      .image-collection {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 1.5rem;
+        .img-container {
+          width: 120px;
+          padding-bottom: 1.5rem;
+          .img {
+            width: 120px;
+            img {
+              width: 100%;
+              cursor: move;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.question-required-row {
+  padding: 10px 0px;
+}
+
+.question-text-input {
+  display: inline-block;
+  width: 90%;
+}
+
+.question-required {
+  float: right;
+  display: flex;
+}
+
+.question-required-text {
+  margin-right: 15px;
+}
+
+.question-choice {
+  width: 100%;
+}
+
+.add-choice-button {
+  margin-left: 75px !important;
+  margin-top: 10px !important;
+}
+
+.char-radio {
+  margin-right: 10px !important;
+}
+
+.edit-select-input {
+  margin-left: 15px !important;
+}

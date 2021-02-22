@@ -1,0 +1,33 @@
+.dynamic-content-dialog {
+  .conditions-group {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .dynamic-content-header {
+    display: flex;
+    flex-wrap: nowrap;
+
+    .dynamic-content-description {
+      flex: 1 1 80%;
+    }
+
+    .spacer {
+      flex: 1 1 18%;
+    }
+
+    .dynamic-content-switch-wrapper {
+      flex: 1 1 auto;
+    }
+
+    margin-bottom: 15px;
+  }
+
+  .condition-field-btn {
+    width: 175px;
+  }
+
+  .condition-compare-btn {
+    width: 150px;
+  }
+}

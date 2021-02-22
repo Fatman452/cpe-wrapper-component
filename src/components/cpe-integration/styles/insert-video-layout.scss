@@ -1,0 +1,42 @@
+.insert-video-dialog {
+  .video-thumbnail-preview-block {
+    background: black;
+    overflow: hidden;
+    margin: auto;
+
+    .video-thumbnail-image {
+      max-width: 25em;
+      max-height: 12.5em;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .video-name-display {
+    font-weight: bold;
+    max-width: 460px;
+  }
+
+  .insert-video-row,
+  .video-thumbnail-label-row,
+  .video-name-row {
+    margin-bottom: 5px;
+  }
+
+  .video-link-divider {
+    border-top: 1px solid #bbb;
+  }
+
+  .video-icon {
+    padding-left: 0.4rem;
+    padding-top: 0.35rem;
+
+    &.icon-closeCircleFilled {
+      color: #d32f2f;
+    }
+    &.icon-checkCircleFilled {
+      color: #b2f8df;
+    }
+  }
+}

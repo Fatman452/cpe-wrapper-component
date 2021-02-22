@@ -1,0 +1,5 @@
+.radio.radio-inline {
+  &:not(:last-of-type) {
+    margin-right: 0;
+  }
+}

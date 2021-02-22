@@ -1,0 +1,55 @@
+/*
+* Styles for drag n drop highlighters
+*/
+.dd-highlighter {
+  position: absolute;
+  z-index: 100;
+  background-color: #fa48f2;
+  a {
+    pointer-events: none;
+  }
+}
+
+/*
+* Styles for text-wrapping drop zones
+*/
+.dd-text-wrap {
+  position: absolute;
+  background: #fc3df5;
+  opacity: 0.3;
+  z-index: 698;
+}
+
+.dd-text-wrap-right {
+  right: 0;
+}
+
+/*
+* Prevent outlines on focued elements (caused by Draggable)
+*/
+tr[data-content-group="panel"]:focus {
+  outline: 0;
+}
+
+/*
+* Hover states for "is draggable" indicator...
+*/
+.drydoc-draggable-element {
+  cursor: move;
+  a {
+    img {
+      cursor: move;
+    }
+  }
+}
+.drydoc-draggable-layout {
+  cursor: move;
+}
+
+.palette {
+  .palette-view-body {
+    div:focus {
+      outline: 0;
+    }
+  }
+}

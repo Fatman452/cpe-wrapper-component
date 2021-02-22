@@ -1,0 +1,37 @@
+.dropdown-menu.table-size-menu {
+  padding: 12px;
+
+  .menu-heading {
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+
+    .menu-heading-table-size {
+      font-weight: bold;
+    }
+  }
+
+  .sizing-grid {
+    .sizing-grid-row {
+      display: flex;
+    }
+
+    .sizing-grid-column {
+      height: 20px;
+      width: 20px;
+
+      margin: 2px;
+
+      border-radius: 2px;
+
+      &:not(.selected) {
+        border: 1px solid #979797;
+      }
+
+      &.selected {
+        border: 2px solid #799df6;
+        background: #deeef7;
+      }
+    }
+  }
+}

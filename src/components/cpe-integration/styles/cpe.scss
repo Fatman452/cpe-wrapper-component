@@ -1,0 +1,56 @@
+#wrong {
+  color: #ff0000;
+}
+
+.email {
+  width: 100%;
+  background-color: #eee;
+}
+
+.email-inner {
+  margin: auto;
+  background-color: #ddd;
+}
+
+.toolbar-target {
+  text-align: center;
+}
+
+.drydoc-header {
+  background-color: #ffffff;
+  z-index: 1000;
+}
+
+.paddedDocument {
+  padding: 0 20px 0 20px;
+}
+
+#console-messages {
+  border-bottom: 0 !important;
+}
+
+.fly-out {
+  .color-wrapper {
+    position: absolute;
+    right: 0;
+  }
+}
+// overrides for distUI iframe
+.ui-dialog {
+  z-index: 1052 !important;
+}
+.ui-widget-overlay {
+  display: none;
+}
+
+.physical-address-form {
+  .select {
+    max-width: 100%;
+  }
+}
+
+#context-menu-component {
+  .ctct-theme {
+    background-color: transparent;
+  }
+}

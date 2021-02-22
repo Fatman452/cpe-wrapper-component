@@ -1,0 +1,23 @@
+.insert-lp-link-table {
+  .table {
+    table-layout: fixed !important;
+  }
+  .loading-lps {
+    max-width: 100%;
+    text-align: center;
+  }
+  .campaign-name-table-header {
+    width: 50%;
+  }
+  .lp-name-table-column {
+    width: 100%;
+    label {
+      width: 100%;
+    }
+    .radio-label-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

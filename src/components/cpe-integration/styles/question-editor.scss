@@ -1,0 +1,15 @@
+// Temporary override of FEKit v6 styling not displaying radios/checkboxes for question choices in editor.
+.radio.question_answer,
+.checkbox.question_answer {
+  > input[type="radio"],
+  > input[type="checkbox"] {
+    height: 12px !important;
+    width: 12px !important;
+    left: 0px !important;
+    right: 0px !important;
+    position: relative !important;
+    margin-top: 5px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}

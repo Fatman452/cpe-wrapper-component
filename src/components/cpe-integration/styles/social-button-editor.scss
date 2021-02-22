@@ -1,0 +1,59 @@
+/* TODO: Do not merge the below padding style master.
+   Fix me. The PaletteDrawer component currently doesn't handle contentFlush
+*/
+.social-palette-drawer {
+  .palette-drawer-body {
+    padding: 0 !important;
+  }
+}
+
+.social-section {
+  padding: 15px 1rem 1rem 1rem;
+}
+
+.social-styles-menu-wrapper {
+  display: flex;
+  .social-styles-dropdown {
+    flex: 1 1 100%;
+    .btn {
+      width: 100%;
+    }
+    div {
+      left: 56px;
+    }
+  }
+}
+
+.social-pages-menu-wrapper {
+  display: flex;
+  .social-pages-dropdown {
+    flex: 1 1 100%;
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.social-style-options {
+  padding-top: 17px;
+  .social-style-option {
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+    .radio.radio-inline {
+      margin-right: 10px;
+    }
+    .social-style-option-icons {
+      display: inline;
+      padding: 15px 5px;
+      &.social-style-background {
+        background-color: #cfd8dc;
+      }
+      img {
+        &:not(:first-of-type) {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
