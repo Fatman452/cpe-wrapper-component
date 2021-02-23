@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CPE, { ServiceManager } from 'cross-platform-editor';
+import { BASE_URI } from '.';
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
   try {
@@ -620,7 +621,6 @@ var mockDistUI = function mockDistUI() {
 //mock dist UI
 
 mockDistUI();
-var BASE_URI = process.REACT_APP_API_URL || "http://localhost:8002";
 var services = {
   contacts: ContactsService,
   emailCustomerAccount: EmailCustomerAccountService,

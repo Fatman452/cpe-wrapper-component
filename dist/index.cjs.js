@@ -4,6 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var React = require('react');
 var CPE = require('cross-platform-editor');
+var _ = require('.');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -184,14 +185,14 @@ var MockWebpackDocumentClient = /*#__PURE__*/function () {
   _createClass(MockWebpackDocumentClient, [{
     key: "getRenderedDocument",
     value: function getRenderedDocument(documentId) {
-      return fetch("".concat(BASE_URI, "/accounts/").concat(this.accountId, "/documents/").concat(documentId, "/rendered_content")).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/accounts/").concat(this.accountId, "/documents/").concat(documentId, "/rendered_content")).then(function (r) {
         return r.json();
       });
     }
   }, {
     key: "getDocument",
     value: function getDocument(documentId) {
-      return fetch("".concat(BASE_URI, "/accounts/").concat(this.accountId, "/documents/").concat(documentId)).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/accounts/").concat(this.accountId, "/documents/").concat(documentId)).then(function (r) {
         return r.json();
       }).then(function (response) {
         var onGetDocumentEvent = new CustomEvent("onGetDocument", {
@@ -204,7 +205,7 @@ var MockWebpackDocumentClient = /*#__PURE__*/function () {
   }, {
     key: "createDocumentFromTemplate",
     value: function createDocumentFromTemplate(templateId) {
-      return fetch("".concat(BASE_URI, "/accounts/").concat(this.accountId, "/templates/{").concat(templateId, "}/documents"), {
+      return fetch("".concat(_.BASE_URI, "/accounts/").concat(this.accountId, "/templates/{").concat(templateId, "}/documents"), {
         method: "POST"
       }).then(function (r) {
         return r.json();
@@ -213,7 +214,7 @@ var MockWebpackDocumentClient = /*#__PURE__*/function () {
   }, {
     key: "updateDocument",
     value: function updateDocument(documentId, json) {
-      return fetch("".concat(BASE_URI, "/accounts/").concat(this.accountId, "/documents/").concat(documentId), {
+      return fetch("".concat(_.BASE_URI, "/accounts/").concat(this.accountId, "/documents/").concat(documentId), {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
@@ -240,7 +241,7 @@ var MockWebpackDocumentClient = /*#__PURE__*/function () {
   }, {
     key: "getTemplates",
     value: function getTemplates() {
-      return fetch("".concat(BASE_URI, "/applications/").concat(this.applicationId, "/template_views/Released")).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/applications/").concat(this.applicationId, "/template_views/Released")).then(function (r) {
         return r.json();
       });
     }
@@ -257,7 +258,7 @@ var EmailCustomerAccountService = /*#__PURE__*/function () {
   _createClass(EmailCustomerAccountService, [{
     key: "getEmailCustomerAccount",
     value: function getEmailCustomerAccount() {
-      return fetch("".concat(BASE_URI, "/email-account")).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/email-account")).then(function (r) {
         return r.json();
       });
     }
@@ -280,7 +281,7 @@ var AccountService = /*#__PURE__*/function () {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return fetch("".concat(BASE_URI, "/accounts")).then(function (r) {
+                return fetch("".concat(_.BASE_URI, "/accounts")).then(function (r) {
                   return r.json();
                 });
 
@@ -320,7 +321,7 @@ var VimeoService = /*#__PURE__*/function () {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return fetch("".concat(BASE_URI, "/videos/vimeo/").concat(videoId)).then(function (r) {
+                return fetch("".concat(_.BASE_URI, "/videos/vimeo/").concat(videoId)).then(function (r) {
                   return r.json();
                 });
 
@@ -354,7 +355,7 @@ var CommonDataService = /*#__PURE__*/function () {
   _createClass(CommonDataService, [{
     key: "getStateData",
     value: function getStateData() {
-      return fetch("".concat(BASE_URI, "/common/states")).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/common/states")).then(function (r) {
         return r.json();
       });
     }
@@ -371,14 +372,14 @@ var MockSettingsService = /*#__PURE__*/function () {
   _createClass(MockSettingsService, [{
     key: "getCpeSettingByName",
     value: function getCpeSettingByName(settingName) {
-      return fetch("".concat(BASE_URI, "/settings/cpe/").concat(settingName)).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/settings/cpe/").concat(settingName)).then(function (r) {
         return r.json();
       });
     }
   }, {
     key: "updateCpeSetting",
     value: function updateCpeSetting(settingName, settingValue) {
-      return fetch("".concat(BASE_URI, "/settings/cpe/").concat(settingName), {
+      return fetch("".concat(_.BASE_URI, "/settings/cpe/").concat(settingName), {
         method: "POST",
         body: {
           settingValue: settingValue
@@ -400,21 +401,21 @@ var ContactsService = /*#__PURE__*/function () {
   _createClass(ContactsService, [{
     key: "getContactDetails",
     value: function getContactDetails() {
-      return fetch("".concat(BASE_URI, "/contact/1/details")).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/contact/1/details")).then(function (r) {
         return r.json();
       });
     }
   }, {
     key: "getContactLists",
     value: function getContactLists() {
-      return fetch("".concat(BASE_URI, "/contacts")).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/contacts")).then(function (r) {
         return r.json();
       });
     }
   }, {
     key: "createContactList",
     value: function createContactList(name) {
-      return fetch("".concat(BASE_URI, "/contact"), {
+      return fetch("".concat(_.BASE_URI, "/contact"), {
         method: "POST",
         body: {
           name: name
@@ -436,28 +437,28 @@ var MockMyLibraryService = /*#__PURE__*/function () {
   _createClass(MockMyLibraryService, [{
     key: "getImages",
     value: function getImages() {
-      return fetch("".concat(BASE_URI, "/library/images")).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/library/images")).then(function (r) {
         return r.json();
       });
     }
   }, {
     key: "getFolders",
     value: function getFolders() {
-      return fetch("".concat(BASE_URI, "/library/folders")).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/library/folders")).then(function (r) {
         return r.json();
       });
     }
   }, {
     key: "getSummary",
     value: function getSummary() {
-      return fetch("".concat(BASE_URI, "/library/summary")).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/library/summary")).then(function (r) {
         return r.json();
       });
     }
   }, {
     key: "generateImageFolders",
     value: function generateImageFolders() {
-      return fetch("".concat(BASE_URI, "/library/folders"), {
+      return fetch("".concat(_.BASE_URI, "/library/folders"), {
         method: "POST"
       }).then(function (r) {
         return r.json();
@@ -476,7 +477,7 @@ var ShoppableProductService = /*#__PURE__*/function () {
   _createClass(ShoppableProductService, [{
     key: "getProducts",
     value: function getProducts() {
-      return fetch("".concat(BASE_URI, "/shoppable-products")).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/shoppable-products")).then(function (r) {
         return r.json();
       });
     }
@@ -493,21 +494,21 @@ var ActionblockPltService = /*#__PURE__*/function () {
   _createClass(ActionblockPltService, [{
     key: "getProductData",
     value: function getProductData() {
-      return fetch("".concat(BASE_URI, "/action-block/products")).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/action-block/products")).then(function (r) {
         return r.json();
       });
     }
   }, {
     key: "getLandingPages",
     value: function getLandingPages() {
-      return fetch("".concat(BASE_URI, "/action-block/landing-pages")).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/action-block/landing-pages")).then(function (r) {
         return r.json();
       });
     }
   }, {
     key: "insertProduct",
     value: function insertProduct(payload) {
-      return fetch("".concat(BASE_URI, "/action-block/product"), {
+      return fetch("".concat(_.BASE_URI, "/action-block/product"), {
         method: "POST",
         body: _objectSpread2({}, payload)
       }).then(function (r) {
@@ -517,7 +518,7 @@ var ActionblockPltService = /*#__PURE__*/function () {
   }, {
     key: "createAbSurvey",
     value: function createAbSurvey(payload) {
-      return fetch("".concat(BASE_URI, "/action-block/abSurvey"), {
+      return fetch("".concat(_.BASE_URI, "/action-block/abSurvey"), {
         method: "POST",
         body: _objectSpread2({}, payload)
       }).then(function (r) {
@@ -527,7 +528,7 @@ var ActionblockPltService = /*#__PURE__*/function () {
   }, {
     key: "createAbRsvp",
     value: function createAbRsvp(payload) {
-      return fetch("".concat(BASE_URI, "/action-block/abRsvp"), {
+      return fetch("".concat(_.BASE_URI, "/action-block/abRsvp"), {
         method: "POST",
         body: _objectSpread2({}, payload)
       }).then(function (r) {
@@ -537,7 +538,7 @@ var ActionblockPltService = /*#__PURE__*/function () {
   }, {
     key: "createAbPoll",
     value: function createAbPoll(payload) {
-      return fetch("".concat(BASE_URI, "/action-block/abPoll"), {
+      return fetch("".concat(_.BASE_URI, "/action-block/abPoll"), {
         method: "POST",
         body: _objectSpread2({}, payload)
       }).then(function (r) {
@@ -557,7 +558,7 @@ var ShoppingcartService = /*#__PURE__*/function () {
   _createClass(ShoppingcartService, [{
     key: "saveProduct",
     value: function saveProduct(payload) {
-      return fetch("".concat(BASE_URI, "/cart/product"), {
+      return fetch("".concat(_.BASE_URI, "/cart/product"), {
         method: "POST",
         body: _objectSpread2({}, payload)
       }).then(function (r) {
@@ -577,14 +578,14 @@ var WebExtractService = /*#__PURE__*/function () {
   _createClass(WebExtractService, [{
     key: "getWebContent",
     value: function getWebContent() {
-      return fetch("".concat(BASE_URI, "/web-extract/content")).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/web-extract/content")).then(function (r) {
         return r.json();
       });
     }
   }, {
     key: "getValidProviders",
     value: function getValidProviders() {
-      return fetch("".concat(BASE_URI, "/web-extract/valid-providers")).then(function (r) {
+      return fetch("".concat(_.BASE_URI, "/web-extract/valid-providers")).then(function (r) {
         return r.json();
       });
     }
@@ -629,7 +630,6 @@ var mockDistUI = function mockDistUI() {
 //mock dist UI
 
 mockDistUI();
-var BASE_URI = process.REACT_APP_API_URL || "http://localhost:8002";
 var services = {
   contacts: ContactsService,
   emailCustomerAccount: EmailCustomerAccountService,

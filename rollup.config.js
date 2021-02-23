@@ -3,13 +3,26 @@ import external from 'rollup-plugin-peer-deps-external';
 import del from 'rollup-plugin-delete';
 import scss from 'rollup-plugin-scss';
 import pkg from './package.json';
+
+const path = require('path'); 
+
 const externals = {
     'react': 'React',
     'react-dom': 'ReactDOM',
     'react-scripts': 'ReactScripts',
 };
 
-
+const scss_plugin = scss({
+    modules: true,
+    extensions: ['.scss'],
+    use: [
+        [
+            'sass', {
+                includePaths: [path.resolve('node_modules')]
+            }
+        ]
+    ]
+})
 export default {
     input: pkg.source,
     output: [
@@ -18,7 +31,7 @@ export default {
     ],
     plugins: [
         external(),
-        scss(),
+        scss_plugin,
         babel({
             exclude: 'node_modules/**'
         }),

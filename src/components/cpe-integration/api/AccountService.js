@@ -1,4 +1,4 @@
-import { BASE_URI } from "../index"
+import { BASE_URI } from "."
 
 export class AccountService {
   async getAccount() {

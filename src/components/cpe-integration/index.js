@@ -18,10 +18,6 @@ import { mockDistUI } from "./mockDistUI"
 //mock dist UI
 mockDistUI()
 
-export const BASE_URI = process.REACT_APP_API_URL || "http://localhost:8002"
-
-
-
 const services = {
   contacts: ContactsService,
   emailCustomerAccount: EmailCustomerAccountService,
