@@ -2,9 +2,11 @@ import babel from '@rollup/plugin-babel';
 import external from 'rollup-plugin-peer-deps-external';
 import del from 'rollup-plugin-delete';
 import scss from 'rollup-plugin-scss';
+import autoprefixer from 'autoprefixer';
+import postcss from 'postcss';
 import pkg from './package.json';
 
-const path = require('path'); 
+const path = require('path');
 
 const externals = {
     'react': 'React',
@@ -14,14 +16,17 @@ const externals = {
 
 const scss_plugin = scss({
     modules: true,
-    extensions: ['.scss'],
+    extensions: ['.scss', '.sass', '.css'],
     use: [
         [
-            'sass', {
+            'scss', {
                 includePaths: [path.resolve('node_modules')]
             }
         ]
-    ]
+    ],
+    processor: css => postcss([autoprefixer])
+        .process(css)
+        .then(result => result.css)
 })
 export default {
     input: pkg.source,
